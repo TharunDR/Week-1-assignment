@@ -8,7 +8,20 @@
 */
 
 function isAnagram(str1, str2) {
-
+    let len1 = str1.length;
+    let len2 = str2.length;
+    if(len1!=len2){
+      console.log("Invalid Input, It is not an Anagram")
+      return
+    }
+   let a = str1.split('').sort().join('');
+   let b = str2.split('').sort().join('');
+   if (a === b) {
+    console.log(true );
+   } else {
+    console.log(false);
+   }
 }
+isAnagram("india","diaii")
 
 module.exports = isAnagram;
